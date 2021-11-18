@@ -10,3 +10,8 @@
 <li>Developpement avec Vue JS</li>
 <li>Lancer le serveur Frontend avec <strong>npm run serve</strong></li>
 </ul>
+<h2>Backend</h2>
+<ul>
+<li>Developpement avec Node JS</li>
+<li>Lancer le serveur Backend avec <strong>nodemon server</strong></li>
+</ul>
