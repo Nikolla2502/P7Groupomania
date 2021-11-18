@@ -5,3 +5,8 @@
 <li>Vue JS</li>
 <li>Base de donnée MySQL</li>
 </ul>
+<h2>Frontend</h2>
+<ul>
+<li>Developpement avec Vue JS</li>
+<li>Lancer le serveur Frontend avec <strong>npm run serve</strong></li>
+</ul>
