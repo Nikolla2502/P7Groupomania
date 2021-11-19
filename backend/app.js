@@ -1,6 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
+
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -27,6 +29,10 @@ next();
 app.use((req, res, next) => {
 console.log('Réponse envoyée avec succès !');
 });
+
+
+
+app.use(bodyParser.json());
 
 module.exports = app;
 
