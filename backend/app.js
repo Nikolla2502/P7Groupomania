@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mysql = require('mysql');
 
 const app = express();
 
@@ -12,6 +13,16 @@ app.use((req, res, next) => {
     });
 
 
+// connection MySQL
+const db = mysql.createConnection({
+    host: "localhost",
+    user: "process.env.USER",
+    password: "process.env.PASSWORD"
+});
+db.connect(function(err) {
+    if (err) throw err;
+    console.log("Connecté à la base de données MySQL!");
+  });
 
 app.use((req, res, next) => {
 console.log('Requête reçue !');

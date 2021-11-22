@@ -1,6 +1,7 @@
 <template>
-<ul class="liste">
-    <li v-for="(fruit, index) in fruits" v-bind:key="index">{{ fruit }}</li>
+<ul class="connexion">
+    <li >{{ name }}</li>
+    <li >{{ password }}</li>
 </ul>
     
 </template>
@@ -8,10 +9,11 @@
 
 <script>
 export default {
-    name: 'Liste',
+    name: 'connexion',
     data(){
         return {
-            fruits: ['Orange', 'Papaye', 'Fraise']
+            name : "name",
+            password: "Password"
         }
     }
 }

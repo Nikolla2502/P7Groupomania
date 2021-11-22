@@ -1,13 +1,13 @@
 <template>
     <div>
         <h1>{{ txt }}</h1>
-        <liste></liste>
+        <connexion></connexion>
     </div>
 </template>
 
 
 <script>
-import Liste from './liste.vue'
+import connexion from './connexion.vue'
 export default {
     name: 'Contenu',
     data(){                  //  equivalent à data: function()
@@ -16,7 +16,7 @@ export default {
         }
     },
     components: {
-        'liste': Liste
+        'connexion': connexion
     }
 }
 
