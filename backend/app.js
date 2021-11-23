@@ -4,6 +4,7 @@ const mysql = require('mysql');
 
 const app = express();
 
+require('dotenv').config()
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -16,11 +17,15 @@ app.use((req, res, next) => {
 // connection MySQL
 const db = mysql.createConnection({
     host: "localhost",
-    user: "process.env.USER",
-    password: "process.env.PASSWORD"
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    
 });
 db.connect(function(err) {
-    if (err) throw err;
+    if (err) {
+        throw Error;
+    }
+    
     console.log("Connecté à la base de données MySQL!");
   });
 
